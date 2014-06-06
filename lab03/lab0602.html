@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link href="css/lab06.css" rel="stylesheet" type="text/css"/>
+        <script src="script/lab06.js"></script>
+        <script>
+            function toggleElement(name) {
+                var el = document.getElementById(name);
+                if (el.style.display !== "block")
+                    el.style.display = "block";
+                else
+                    el.style.display = "none";
+            }
+        </script>
+    </head>
+    <body>
+        <ul class = "menu">
+            <li>
+                <span>Меню 1</span>
+                <ul class="submenu">
+                    <li>
+                        <span>Подменю 1</span>
+                    </li>
+                    <li>
+                        <span>Подменю 2</span>
+                    </li>
+                    <li>
+                        <span>Подменю 3</span>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span>Меню 2</span>
+            </li>
+            <li>
+                <span>Меню 3</span>
+            </li>
+            <li>
+                <span>Меню 4</span>
+                <ul class="submenu">
+                    <li>
+                        <span>Подменю 1</span>
+                    </li>
+                    <li>
+                        <span>Подменю 2</span>
+                    </li>
+                    <li>
+                        <span>Подменю 3</span>
+                    </li>
+                    <li>
+                        <span>Подменю 4</span>
+                    </li>
+                </ul>  
+            </li>
+            <li>
+                <span>Меню 5</span>
+            </li>
+            <li>
+                <span>Меню 6</span>
+            </li>
+        </ul>
+        <br/>
+        <br/>
+        <br/>
+        <ul class="menu">
+            <li onmouseover="toggleElement('submenu1')" onmouseout="toggleElement('submenu1')">Меню 1
+                <ul id="submenu1" class="submenu">
+                    <li>Подменю 1</li>
+                    <li>Подменю 2</li>
+                    <li>Подменю 3</li>
+                </ul>
+            </li>
+            <li>Меню 2</li>
+            <li>Меню 3</li>
+            <li>Меню 4</li>
+            <li>Меню 5</li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+.field{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 1px solid grey;
+    background: lightgray;
+}
+
+.cell{
+    position: absolute;
+    height: 98px;
+    width: 98px;
+    background: azure;
+    border: 1px solid background;
+}
+
+.label{
+    position: absolute;;
+    top: 30px;
+    left: 40px;
+    font: bold 30px Arial;
+}
+
+.selectable:hover{
+    background: #71ab57;
+    cursor: pointer;
+}
