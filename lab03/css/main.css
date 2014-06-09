@@ -1,0 +1,107 @@
+form *{
+    font-family:Arial;
+    margin: 0;
+    padding: 0;
+    color: #0e385f;
+}
+
+form
+{
+    display: table-cell;
+    background: #e3e6f1;
+    border: 1px solid #A1AACC;
+    padding: 10px;
+    min-width: 390px;
+}
+
+form h3
+{
+    padding: 7px 0px 4px 10px;
+    //-webkit-margin-after:0;
+}
+
+form p
+{
+    padding: 0 0 10px 15px;
+}
+
+form .spliter
+{
+    height: 1px;
+    background: #0e385f;
+    margin: 0 4px;
+}
+
+form table
+{
+    border-spacing: 4px;
+    margin: 8px 0 0 0;
+}
+
+form td
+{
+    vertical-align: bottom;
+}
+
+form .label
+{
+    text-align: right;
+    vertical-align: top;
+    padding: 8px 0 0 0;
+    font-size: 13px;
+    width: 105px;
+}
+
+form #sex
+{
+    width: 262px;
+}
+
+form input
+{
+    padding: 6px;
+    width: 246px;
+}
+
+form select
+{
+    padding: 6px;
+}
+
+form a
+{
+    display: block;
+    text-decoration: none;
+    color: #3b5998;
+}
+
+form .submit
+{
+    width: 110px;
+    background: #71ab57;
+    border: 1px #3b6e22;
+    color: #fff;
+    font-weight: bold;
+}
+
+form ul{
+    list-style: none;
+}
+
+form li{
+    padding: 5px 0;
+}
+
+.login{
+    position: fixed;
+    right:10px;
+    top: 10px;
+}
+
+form .small{
+    font-size: 11px;
+}
+
+form table th, td{
+    padding: 0 5px;
+}

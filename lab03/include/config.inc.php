@@ -16,7 +16,8 @@
   
   define('DB_HOST', 'localhost');
   define('DB_USER', 'root');
-  define('DB_PASS', 'MyNewPass');
+  define('DB_PASS', '321679485');
+  //define('DB_PASS', 'MyNewPass');
   define('DB_NAME', 'rental');
   define('DB_PORT', 3306);
   

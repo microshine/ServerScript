@@ -6,17 +6,8 @@
         <meta name="viewport" content="width=device-width">
         <link href="css/lab06.css" rel="stylesheet" type="text/css"/>
         <script src="script/lab06.js"></script>
-        <script>
-            function toggleElement(name) {
-                var el = document.getElementById(name);
-                if (el.style.display !== "block")
-                    el.style.display = "block";
-                else
-                    el.style.display = "none";
-            }
-        </script>
     </head>
-    <body>
+    <body onload="new Menu('topMenu')">
         <ul class = "menu">
             <li>
                 <span>Меню 1</span>
@@ -53,7 +44,7 @@
                     <li>
                         <span>Подменю 4</span>
                     </li>
-                </ul>  
+                </ul>
             </li>
             <li>
                 <span>Меню 5</span>
@@ -65,9 +56,9 @@
         <br/>
         <br/>
         <br/>
-        <ul class="menu">
-            <li onmouseover="toggleElement('submenu1')" onmouseout="toggleElement('submenu1')">Меню 1
-                <ul id="submenu1" class="submenu">
+        <ul id="topMenu" class="menu">
+            <li>Меню 1
+                <ul>
                     <li>Подменю 1</li>
                     <li>Подменю 2</li>
                     <li>Подменю 3</li>
