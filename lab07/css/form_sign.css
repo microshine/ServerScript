@@ -1,0 +1,84 @@
+.form_signup *
+{
+    font-family:Arial;
+    margin: 0;
+    padding: 0;
+    color: #0e385f;
+}
+
+.form_signup
+{
+    background: #e3e6f1;
+    width: 390px;
+}
+
+.form_signup h3
+{
+    padding: 7px 0px 4px 10px;
+    //-webkit-margin-after:0;
+}
+
+.form_signup p
+{
+    padding: 0 0 10px 15px;
+}
+
+.form_signup .spliter
+{
+    height: 1px;
+    background: #0e385f;
+    margin: 0 4px;
+}
+
+.form_signup table
+{
+    border-spacing: 4px;
+    margin: 8px 0 0 0;
+}
+
+.form_signup td
+{
+    vertical-align: bottom;
+}
+
+.form_signup .label
+{
+    text-align: right;
+    vertical-align: top;
+    padding: 8px 0 0 0;
+    font-size: 13px;
+    width: 105px;
+}
+
+.form_signup #sex
+{
+    width: 262px;
+}
+
+.form_signup input
+{
+    padding: 6px;
+    width: 246px;
+}
+
+.form_signup select
+{
+    padding: 6px;
+}
+
+.form_signup a
+{
+    display: block;
+    text-decoration: none;
+    font-size: 11px;
+    color: #3b5998;
+}
+
+.form_signup .submit
+{
+    width: 110px;
+    background: #71ab57;
+    border: 1px #3b6e22;
+    color: #fff;
+    font-weight: bold;
+}

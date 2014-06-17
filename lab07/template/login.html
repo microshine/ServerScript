@@ -1,0 +1,34 @@
+<form action="" method="POST" class="login" id="formLogin">
+  <h3>Вход</h3>
+  <p>Скажи тук тук и входи.</p>
+  <div class="spliter"></div>
+  <table>
+    <tr>
+      <td class="label">
+        <label target="{$FORM_EMAIL}">Email:</label>
+      </td>
+      <td>
+        <input type="text" id="{$FORM_EMAIL}" name="{$FORM_EMAIL}"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="label">
+        <label target="{$FORM_PASS}">Пароль:</label>
+      </td>
+      <td>
+        <input type="text" id="{$FORM_PASS}" name="{$FORM_PASS}"/>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      </td>
+      <td>
+        <a class="small" href="signup.php">Регистрация</a>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><input class="submit" type="submit" value="Sign Up" name="submit"/></td>
+    </tr> 
+  </table>
+</form>

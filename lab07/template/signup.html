@@ -1,0 +1,95 @@
+<form action method="POST" id="formSignup">
+  <h3>Sign Up</h3>
+  <p>It's free and always will be.</p>
+  <div class="spliter"></div>
+  <table>
+    <tr>
+      <td class="label">
+        <label target="{$FIRST_NAME}">First Name:</label>
+      </td>
+      <td>
+        <input type="text" id="{$FIRST_NAME}" name="{$FIRST_NAME}"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="label">
+        <label target="{$LAST_NAME}">Last Name:</label>
+      </td>
+      <td>
+        <input type="text" id="{$LAST_NAME}" name="{$LAST_NAME}"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="label">
+        <label target="{$EMAIL}">Your Email:</label>
+      </td>
+      <td>
+        <input type="text" id="{$EMAIL}" name="{$EMAIL}"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="label">
+        <label target="{$REEMAIL}">Re-enter Email:</label>
+      </td>
+      <td>
+        <input type="text" id="{$REEMAIL}" name="{$REEMAIL}"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="label">
+        <label target="{$PASS}">New Password:</label>
+      </td>
+      <td>
+        <input type="text" id="{$PASS}" name="{$PASS}"/>
+      </td>
+    </tr> 
+    <tr>
+      <td class="label">
+        <label target="{$SEX}">Sex:</label>
+      </td>
+      <td>
+        <select id="{$SEX}" name="{$SEX}">
+          <option hidden selected>{$SEX_NULL}</option>
+          <option >Male</option>
+          <option >Female</option>
+        </select>
+      </td>
+    </tr> 
+    <tr>
+      <td class="label">
+        <label target="{$BIRTHDAY_MONTH}">Birthday:</label>
+      </td>
+      <td>
+        <select id="{$BIRTHDAY_MONTH}" name="{$BIRTHDAY_MONTH}">
+          <option hidden selected>{$BIRTHDAY_MONTH_NULL}</option>
+          <option >Январь</option>
+          <option >Февраль</option>
+          <option >Март</option>
+          <option >Апрель</option>
+          <option >Май</option>
+          <option >Июнь</option>
+          <option >Июль</option>
+          <option >Август</option>
+          <option >Сентябрь</option>
+          <option >Октябрь</option>
+          <option >Ноябрь</option>
+          <option >Декабрь</option>
+        </select>
+        <select id="{$BIRTHDAY_DAY}" name="{$BIRTHDAY_DAY}">
+          <option hidden selected>{$BIRTHDAY_DAY_NULL}</option>
+          {$BIRTHDAY_DAY_ARRAY}
+        </select>
+        <select id="{$BIRTHDAY_YEAR}" name="{$BIRTHDAY_YEAR}">
+          <option hidden selected>{$BIRTHDAY_YEAR_NULL}</option>
+          {$BIRTHDAY_YEAR_ARRAY}
+        </select>
+        <a class="small" href="">Why do I need to provide this?</a>
+      </td>
+    </tr> 
+    <tr>
+      <td></td>
+      <td><input class="submit" type="button" value="Sign Up" onclick="formSubmit()"/></td>
+    </tr> 
+  </table>
+</form>
+<script src="js/signup.js"></script>
