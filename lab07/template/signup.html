@@ -1,4 +1,4 @@
-<form action method="POST" id="formSignup">
+<form action="user_save.php" method="POST" id="formSignup">
   <h3>Sign Up</h3>
   <p>It's free and always will be.</p>
   <div class="spliter"></div>
@@ -37,10 +37,11 @@
     </tr>
     <tr>
       <td class="label">
-        <label target="{$PASS}">New Password:</label>
+        <label target="{$PASS}">Password:</label>
       </td>
       <td>
-        <input type="text" id="{$PASS}" name="{$PASS}"/>
+        <input type="text" id="{$PASS}" name="{$PASS}" onchange="onPasswordChange()"/>
+        <span id="password_strength"></span>
       </td>
     </tr> 
     <tr>

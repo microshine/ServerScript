@@ -17,11 +17,13 @@ function fileGetAll($email = "", $extension = "")
   }
   if ($condition !== "")
   {
-    $condition = " AND " . $condition;
+    $condition = " WHERE " . $condition;
   }
-  $sql = "SELECT `file_id`, `file_name`, `extension`, `file_size`, `uploaded`, "
-          . "`last_name`, `first_name`, `email` FROM `person`, `file` "
-          . "WHERE `file`.`person_id`=`person`.`person_id`" . $condition;
+  $sql = "SELECT `file`.`file_id`, `file_name`, `extension`, `file_size`, `uploaded`, "
+          . "`last_name`, `first_name`, `email`, CASE WHEN isnull(`rating`) THEN  0 ELSE `rating` END as `rating` FROM "
+          . "`rating_count`"
+          . "RIGHT JOIN (`person` INNER JOIN `file` ON `person`.`person_id`=`file`.`person_id`) ON `rating_count`.`file_id`=`file`.`file_id`"
+          . $condition;
   //echo $sql;
   return dbExecuteAssoc($sql);
 }
@@ -46,4 +48,18 @@ function fileSaveFileToDB($file, $person_id)
   {
     echo "Произошла ошибка";
   }
+}
+
+function fileCount()
+{
+  return dbExecuteScalar("SELECT count(file_id) FROM file");
+}
+
+function fileSaveRating($file_id, $user_id, $rating)
+{
+  dbExecuteNoResult("INSERT INTO `rating` (`file_id`, `person_id`, `rating`) VALUES (".$file_id.", ".$user_id.", ".$rating.")");
+}
+
+function fileRating($file_id){
+  return dbExecuteScalar("SELECT `rating` FROM `rating_count` WHERE `file_id`=$file_id");
 }

@@ -1,0 +1,17 @@
+<div id="mesagebox" class="messagebox">
+  <h3>{$message_title}</h3>
+  <div>
+    {$message_text}
+  </div>
+  <p>Переход на страницу осуществится через <span id="message_counter">{$delay}</span> сек.</p>
+</div>
+<script>
+  function TickTock() {
+    value = parseInt(document.getElementById("message_counter").innerHTML);
+    document.getElementById("message_counter").innerHTML = --value;
+    
+    if (value==0)
+      window.location.assign("{$link}");
+  }
+  setInterval(TickTock, 1000);
+</script>

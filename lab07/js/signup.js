@@ -84,3 +84,40 @@ function getFieldValue(name) {
         return el.value;
     }
 }
+
+function onPasswordChange()
+{
+    var password = document.getElementById('password').value;
+    if (password !== "") {
+        if (password.match(/^[a-zA-ZA-ПР-Яа-пр-я0-9]+$/) === null) {
+            //Не соответствует регулярному выражению
+        } else {
+            var PASSWORD_STRENGTH_URL = "password_strength.php";
+            var data = "password=" + encodeURIComponent(password);
+
+            getUrl(PASSWORD_STRENGTH_URL, onPasswordStrengthCheck, data);
+            return;
+        }
+    }
+    var pswStrength = document.getElementById('password_strength');
+    pswStrength.innerHTML = "";
+}
+
+function onPasswordStrengthCheck(response, headers) {
+    var pswStrength = document.getElementById('password_strength');
+
+    if (response >= 0 && response < 50) {
+        pswStrength.innerHTML = 'weak';
+        pswStrength.style.color = 'red';
+    } else
+    if (response > 50 && response < 100) {
+        pswStrength.innerHTML = 'good';
+            pswStrength.style.color = 'orange';
+    } else
+    if (response >= 100) {
+        pswStrength.innerHTML = 'strong';
+            pswStrength.style.color = 'green';
+    }
+
+    console.log(response);
+}

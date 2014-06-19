@@ -144,3 +144,14 @@ form table th, td{
 .menu li ul li{
     float: none;
 }
+
+.ratingButton{
+    height: 30px;
+    width: 30px;
+    padding: 0 10px;
+    background: #71ab57;
+}
+
+.ratingButton:hover{
+    cursor: pointer;
+}

@@ -1,0 +1,15 @@
+<tr>
+  <td>{$flr_num}</td>
+  <td>{$flr_id}</td>
+  <td>{$flr_name}</td>
+  <td>{$flr_extension}</td>
+  <td>{$flr_size}</td>
+  <td>{$flr_uploaded}</td>
+  <td>{$flr_user}</td>
+  <td>{$flr_email}</td>
+  <td>
+    <span class="ratingButton" onclick="onMinusClicked({$flr_id},{$user_id})">-</span>
+    <span id="rating{$flr_id}">{$flr_rating}</span>
+    <span class="ratingButton" onclick="onPlusClicked({$flr_id},{$user_id})">+</span>
+  </td>
+</tr>
