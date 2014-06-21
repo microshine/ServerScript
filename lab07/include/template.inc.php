@@ -17,7 +17,8 @@ function getView($templateName, $vars = array())
 
 function getViewMessage($title, $message, $link, $delay = 5)
 {
-  echo getView("message.html", array(
+  echo buildLayout("message.html", array(
+      "title" => "Сообщение",
       "message_title" => $title,
       "message_text" => $message,
       "link" => $link,
