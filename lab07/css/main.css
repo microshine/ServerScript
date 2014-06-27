@@ -155,3 +155,37 @@ form table th, td{
 .ratingButton:hover{
     cursor: pointer;
 }
+
+#slider{
+    position: relative;
+    display: table;
+    height: 400px;
+}
+
+#sliderImage{
+    
+}
+
+#sliderImage img{
+    height: 400px;
+}
+
+.sliderBtn:hover{
+    background: #555555;
+    opacity: 0.5;
+}
+.sliderBtn{
+    position: absolute;
+    height: 400px;
+    width: 50%;
+    top: 0;
+    -webkit-transition:background 0.3s ease-in-out;
+}
+
+#sliderLeft{
+    left: 0;
+}
+
+#sliderRight{
+    right:0;
+}

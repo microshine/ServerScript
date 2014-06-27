@@ -52,6 +52,7 @@ function triangle(x, y, height, width, color) {
         context.stroke();
     };
 }
+
 function rect(x, y, height, width, color) {
     this.name = 'rect';
     this.color = color;
@@ -76,7 +77,7 @@ function randomPosition(figure) {
 }
 
 function drawRandom(figures) {
-    var checked_figures = [];
+    var checkedFigures = []; //TODO: change name
     var position;
     for (var i = 0; i < figures.length; i++) {
         if (i === 0) {
@@ -87,26 +88,39 @@ function drawRandom(figures) {
             position = randomPosition(figures[i]);
             figures[i].x = position.x;
             figures[i].y = position.y;
-            while (!checkCollision(figures[i], checked_figures)) {
+            while (!checkCollision(figures[i], checkedFigures)) {
                 position = randomPosition(figures[i]);
                 figures[i].x = position.x;
                 figures[i].y = position.y;
             }
         }
-        checked_figures.push(figures[i]);
-        checked_figures[i].draw();
+        checkedFigures.push(figures[i]);
+        checkedFigures[i].draw();
     }
 }
 
 // Проверка на наложение фигур
-function checkCollision(figure, figures) {
-    for (var i = 0; i < figures.length; i++) {
-        if (figure.x < figures[i].x + figures[i].width && figure.x + figure.width > figures[i].x &&
-                figure.y < figures[i].y + figures[i].height && figure.y + figure.height > figures[i].y) {
-// пересечение фигур
-            return false;
-            //console.log(figure.name + ' - ' + figures[i].name);
+function checkCollision(figure, figures) 
+{
+    var hasCollision = false;
+    var first = figure;
+    
+    for (var i = 0; i < figures.length; i++) 
+    {
+        var second = figures[i];
+        
+        var collisionX = ( first.x < (second.x + second.width) ) && 
+                         ( (first.x + first.width) > second.x );
+        
+        var collisionY = ( first.y < second.y + second.height ) && 
+                         ( first.y + first.height > second.y );
+        
+        if ( collisionX && collisionY )
+        {
+            hasCollision = true;
+            break;
         }
     }
-    return true;
+    
+    return hasCollision;
 }
